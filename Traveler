@@ -1,4 +1,14 @@
-<element name="Champion" type="Background" source="The Great Houses Campaign" id="ID_NV_TGHC_BACKGROUND_CHAMPION">
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Traveler Custom Background</name>
+		<description></description>
+		<update version="0.0.1">
+			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/Traveler" />
+		</update>
+	</info>
+
+	<element name="Champion" type="Background" source="The Great Houses Campaign" id="ID_NV_TGHC_BACKGROUND_CHAMPION">
 		<description>
 			<p>You were chosen by your Tribe Leader to complete an important mission, this mission could decide not only your fate, but your whole tribe, and even future of the humanity itself.</p>
 			<ul>
