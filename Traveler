@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Traveler Custom Background</name>
-		<description></description>
+		<description>Custom Traveler Background made from AideDD</description>
 		<update version="1.0">
 			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/Traveler.xml" />
 		</update>
@@ -23,7 +23,7 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
             		<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
             		<select type="Language" name="Language (Traveler)" number="2" supports="Standard||Exotic" />
-            		<grant type="Background Feature" id="ID_HMBRW_BACKGROUND_TRAVELERCUSTOM_FEATURE_LOCAL_COLOUR" />
+            		<grant type="Background Feature" id="ID_HMBRW_BACKGROUND_TRAVELERCUSTOM_FEATURE_LOCAL_COLOUR"/>
 			<select type="Background Feature" name="Favourite Means of Transport" supports="Optional Background Feature" optional="true" /
 			<select name="Transport" type="List" optional="true">
 				<item id="1">On foot</item>
@@ -35,7 +35,7 @@
 				<item id="7">As a stowaway</item>
 				<item id="8">No particular mode of transport</item>
 			</select>
-			<select name="Personality Trait" type="List" number="2">
+			<select name="Personality Trait" type="List">
 				<item id="1">I always have a travel anecdote to tell about any situation.</item>
 				<item id="2">I've seen so much that nothing really surprises me anymore.</item>
 				<item id="3">I'm always prepared to give a creature the benefit of the doubt and never trust my own prejudices.</item>
