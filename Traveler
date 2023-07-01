@@ -3,86 +3,79 @@
 	<info>
 		<name>Traveler Custom Background</name>
 		<description></description>
-		<update version="0.0.1">
-			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/Traveler" />
+		<update version="1.0">
+			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/Traveler.xml" />
 		</update>
 	</info>
-
-	<element name="Champion" type="Background" source="The Great Houses Campaign" id="ID_NV_TGHC_BACKGROUND_CHAMPION">
+	<element name="Champion" type="Background" source="Homebrew" id="ID_HMBRW_BACKGROUND_TRAVELERCUSTOM">
 		<description>
-			<p>You were chosen by your Tribe Leader to complete an important mission, this mission could decide not only your fate, but your whole tribe, and even future of the humanity itself.</p>
+			<p>You have travelled the world, seeing its wonders and horrors with your own eyes. However you have travelled, you have lived in many lands, in the most diverse climates and under the most varied conditions. You have crossed paths with many people during your travels and are familiar with many cultures. As part of a merchant caravan, alone or in a small group, you've been to places that ordinary people don't even know exist. The big cities and their crowds don't frighten you any more than the deserted expanses, because you know how to get by in any environment.</p>
 			<ul>
-				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with</li>
-				<li><strong>Tool Proficiencies (Optional):</strong> One type of artisan’s tools or one musical instrument</li>
-				<li><strong>Languages (Optional):</strong> Choose any starting or exotic language</li>
-				<li><strong>Equipment:</strong> A set of other tribal clothes, 10 torches, backpack made out of big animal, amount of food equal to 3 rations, hempen rope (50 ft).</li>
+				<li><strong>Skill Proficiencies:</strong> Survival, Persuasion</li>
+				<li><strong>Languages:</strong> two of your choice</li>
+				<li><strong>Equipment:</strong> A walking staff, a souvenir from a faraway land (choose or draw from the trinket table), a book filled with notes on your travels or drawings, a bottle of ink and a quill, some travel clothes and a purse containing 10po.</li>
 			</ul>
-			<div element="ID_NV_TGHC_BACKGROUND_FEATURE_GUILD_MEMBER" />
 		</description>
+		<setters>
+			<set name="short">Survival, Persuasion, 2 Languages</set>
+		</setters>
 		<rules>
-			<select type="Proficiency" name="Skill Proficiency (Champion)" supports="Skill" number="2" />
-			<select type="Proficiency" name="Tool Proficiency (Champion)" supports="Tool" optional="true"/>
-			<select type="Language" name="Language (Champion)" optional="true" />
-			<grant type="Background Feature" id="ID_NV_TGHC_BACKGROUND_FEATURE_GUILD_MEMBER" />
-			<select name="Personality Trait" type="List">
-				<item id="1">My tribe name is "Sky Eye", because sometimes i daydream watching the clouds move through the sky.</item>
-				<item id="2">My tribe name is "Night Wind", because i prefer to attack my enemies under the moonlight.</item>
-				<item id="3">My tribe name is "Sharp Grass", because i hide in high grass, while spying on my prey, before striking it's weak point.</item>
-				<item id="4">My tribe name is "Bone Wings", because i have tattoo of white wings on my back.</item>
-				<item id="5">My tribe name is "Calm Sand", due to my ability to stay calm and move through obstacles like grains of sand on the wind.</item>
-				<item id="6">My tribe name is "Black Guard", because i usually stay up all night and defend other's sleep.</item>
-				<item id="7">My tribe name is "Red Wall", due to my physique and multiple scars from burns on my body.</item>
-				<item id="8">My tribe name is "Light Walker", because i believe that sun is protecting me and others and will only sleep if it's night.</item>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+            		<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            		<select type="Language" name="Language (Traveler)" number="2" supports="Standard||Exotic" />
+            		<grant type="Background Feature" id="ID_HMBRW_BACKGROUND_TRAVELERCUSTOM_FEATURE_LOCAL_COLOUR" />
+			<select type="Background Feature" name="Favourite Means of Transport" supports="Optional Background Feature" optional="true" /
+			<select name="Transport" type="List" optional="true">
+				<item id="1">On foot</item>
+				<item id="2">On horseback</item>
+				<item id="3">In a merchant caravan</item>
+				<item id="4">By boat</item>
+				<item id="5">By cart</item>
+				<item id="6">By magical means</item>
+				<item id="7">As a stowaway</item>
+				<item id="8">No particular mode of transport</item>
+			</select>
+			<select name="Personality Trait" type="List" number="2">
+				<item id="1">I always have a travel anecdote to tell about any situation.</item>
+				<item id="2">I've seen so much that nothing really surprises me anymore.</item>
+				<item id="3">I'm always prepared to give a creature the benefit of the doubt and never trust my own prejudices.</item>
+				<item id="4">I can't stand still and get bored if I spend more than a few days in one place.</item>
+				<item id="5">I'm convinced I'm jinxing the people around me, so I never stay anywhere for long.</item>
+				<item id="6">I like to travel alone, and even when I'm in a group I sometimes go off on my own.</item>
+				<item id="7">I'm fascinated by anything exotic, be it objects, creatures or people.</item>
+				<item id="8">I am condescending to peasants who have never been out of their village.</item>
 			</select>
 			<select name="Ideal" type="List">
-				<item id="1">I never surrender until my mission is complete, whatever the cost.</item>
-				<item id="2">I don't like starting fights, i always think twice before attacking anybody.</item>
-				<item id="3">I never underestimate others, all people have hidden talents.</item>
-				<item id="4">People are just another type of animal, give them the chance and they will tore each other apart, that's why i'm always ready to kill.</item>
-				<item id="5">I give anyone second chance, but i despise anyone who runs from the danger.</item>
-				<item id="6">I always listen to opinions of others, even if they don't know what they're talking about.</item>
+				<item id="1">The world is full of wonders and I want to see them all (Good).</item>
+				<item id="2">Why stay in one place all your life when you can hit the road (Chaotic).</item>
+				<item id="3"> It's my duty to understand other people and meet them (Lawful).</item>
+				<item id="4">Every people has different ways of causing pain, one day I'll know them all (Evil).</item>
+				<item id="5">The world is a vast place, perhaps I haven't seen everything yet (Any).</item>
+				<item id="6">The road is my only true friend (Neutral).</item>
 			</select>
 			<select name="Bond" type="List">
-				<item id="1">Tribe is everything to me.</item>
-				<item id="2">My family made me into who i am today, i will always be thankful to them.</item>
-				<item id="3">I wish to be higher in hierarchy of the tribe, so i will try to please my superiors.</item>
-				<item id="4">I lost everybody who i cared about... now i'm trying to find anybody who will care about me.</item>
-				<item id="5">I'm looking for new faces and stories, everybody have something to tell.</item>
-				<item id="6">I want everyone to know my name and for my legacy to live on even hundred years later.</item>
+				<item id="1">I've heard about a place I absolutely want to go.</item>
+				<item id="2">In the course of my travels, I've fallen madly in love with someone, and one day I'll come back to win their heart.</item>
+				<item id="3">My journey is an initiatory task dictated to me by my community. When I have reached the end of the journey, I will return home.</item>
+				<item id="4">I have a pet, a faithful travelling companion that I wouldn't give up for anything in the world.</item>
+				<item id="5">I've fled the place where I grew up and I don't dare go back.</item>
+				<item id="6">Every step I take takes me further away from a destiny that was foretold to me.</item>
 			</select>
 			<select name="Flaw" type="List">
-				<item id="1">I think bad omens can predict future, i always believe them.</item>
-				<item id="2">I'm the worst at navigation, if people say "go right", i will go left.</item>
-				<item id="3">I sleep like a dead man, nothing can wake me up... sometimes i think even getting stabbed will not awake me.</item>
-				<item id="4">I egregiously underestimate or overestimate the risks a job represents.</item>
-				<item id="5">I don't care about other people's feelings, it's their problem not mine.</item>
-				<item id="6">I vastly underestimate value (both monetary and emotional) of any unique and/or interesting item. </item>
+				<item id="1">Travelling is all that matters to me, I'll never settle anywhere.</item>
+				<item id="2">I don't rest until I've walked for at least an hour, even if that means pacing.</item>
+				<item id="3">I always end up mixing different peoples' customs and making mistakes.</item>
+				<item id="4">I've made a powerful enemy in a faraway land and I hope he never finds out where I am.</item>
+				<item id="5">I remain very naive and believe that there is good in absolutely everyone.</item>
+				<item id="6">I'm not travelling for pleasure, I'm running away from something terrible that is relentlessly pursuing me.</item>
 			</select>
 		</rules>
 	</element>
-	<element name="Feature: Guild Member" type="Background Feature" source="The Great Houses Campaign" id="ID_NV_TGHC_BACKGROUND_FEATURE_GUILD_MEMBER">
+	<element name="Feature: Local colour" type="Background Feature" source="AideDD" id="ID_BACKGROUND_FEATURE_LOCAL_COLOUR">
+		<supports>Background Feature</supports>
 		<description>
-			<p>As part of the Tribe all workers are included in five different Guilds. Usually you either chosen to be part of the particular Guild, because of your skills or personality that fits, or you can ask Guild Leader to apply for any other Guild, if Guild Leader finds your skills to be useful, he will ask Tribe Leader to allow change of the Guilds. Different Tribes have different hierarchy systems, but non-workers are always at the bottom of it and Tribe Leader at the top. These Guilds are:</p>
-			<ul>
-				<li><strong>Hunters' Guild.</strong> Members of Hunters' Guild responsible for providing food for the Tribe and scaring away predatory animals. Even though Foragers gather some fruit and berries, meat brought by the Hunters is the biggest part of other tribe's diet. Rarely Hunters can be used as last resort guards or assassins, if Tribe Leader requires it. Guild prefers those with calm, patient, quick-to-react personalities or overall dextrous people.</li>
-				<li><strong>Foragers' Guild.</strong> Members of Foragers' Guild responsible for exploring tribe's territory for hazards and providing resources, from plant food, like fruit and mushrooms, to building resources, like stone and wood. Foragers usually don't get their part of respect, but without them any project would slow down to a crawl. Sometimes Foragers are used for scouting enemy territory or building, if Tribe Leader requires it. Guild prefers those with tactical, cautious, energetic personalities or overall dextrous people, who know right time to retreat.</li>
-				<li><strong>Warriors' Guild.</strong> Members of Warriors' Guild act as law keepers and general fighting force of the tribe. Tribe Leader has right to militarize Guild when needed, otherwise they're ordered by Guild Leader. Sometimes Warriors used as bodyguards or wardens, if required. Guild prefers those with aggressive, initiative personalities with sense of justice or people with strong builds.</li>
-				<li><strong>Healers' Guild.</strong> Members of Healers' Guild responsible for producing medicine and healing other members of the tribe. Good healers are rare and nobody in their right mind will be aggressive towards them. Rarely Healers used as poisoners or personal physicians for Tribe Leader. Guild prefers those with flexible, thoughtful, meticulous personalities or great medical skills.</li>
-				<li><strong>Tribe Elders.</strong> Though not a Guild, Elders are the mind of the tribe. They share their knowledge and wisdom, helping people self-improve and solve their life problems. And serve as representatives of the tribesmen. Most people have utmost respect for the Elders. Sometimes they can act as judges, negotiators or retinue. You become part of the Elders as soon as you lose the ability to effectively perform your Guild duties and Guild Leader allows you to retire.</li>
-			</ul>
-			<p>Years of work weren't left unnoticed. Everybody in your tribe recognizes you as valuable part of the Guild and respect what you did for the whole tribe. As their Champion and part of the Guild you can always find place to rest, get your share of food and learn local rumors or opinion of other tribesmen on any topic, while in settlements of your tribe.</p>
+			<p>Your travels have taught you to quickly adopt the customs of the people you meet, their accents, the way they dress, the way they behave, even the way they walk. When you arrive in a town or region, it doesn't take long to pass yourself off as a local. What's more, if you wish, you can behave as if you were a native of every place you pass through. At the start of the game, work out with your MD how many origins you can imitate. You also know a few words of many languages, enough to get by in basic social interaction (saying hello, thank you, ordering a drink, for example) with almost any civilised humanoid (here again, the GM is the only judge).</p>
 		</description>
-		<sheet alt="Guild Member">
-			<description>Years of work weren't left unnoticed. Everybody in your tribe recognizes you as valuable part of the Guild and respect what you did for the whole tribe. As their Champion and part of the Guild you can always find place to rest, get your share of food and learn local rumors or opinion of other tribesmen on any topic, while in settlements of your tribe.</description>
-		</sheet>
-		<rules>
-			<select name="Tribe Guild" type="List" optional="true">
-				<item id="1">Hunters' Guild</item>
-				<item id="2">Foragers' Guild</item>
-				<item id="3">Warriors' Guild</item>
-				<item id="4">Healers' Guild</item>
-				<item id="5">Tribe Elders</item>
-			</select>
-		</rules>
+		<sheet alt="Researcher" />
 	</element>
 </elements>
