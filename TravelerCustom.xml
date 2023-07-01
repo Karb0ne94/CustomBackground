@@ -4,7 +4,7 @@
 		<name>Traveler Custom Background</name>
 		<description>Custom Traveler Background made from AideDD</description>
 		<update version="1.0">
-			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/Traveler.xml" />
+			<file name="Traveler.xml" url="https://github.com/Karb0ne94/CustomBackground/edit/main/TravelerCustom.xml"/>
 		</update>
 	</info>
 	<element name="Champion" type="Background" source="Homebrew" id="ID_HMBRW_BACKGROUND_TRAVELERCUSTOM">
